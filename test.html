@@ -1,0 +1,178 @@
+200
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+  <!--[if lt IE 9]><script src="/assets/html5shiv-46bb221fd54dcb2ac8cd214500e12967.js"></script><![endif]-->
+  <script src="/assets/application-64b127ff6c2ec0cd39b00c1659de5430.js"></script>
+  <link href="/assets/small-ltr-dcdaacec1e269885e7d808831111cdf8.css" media="only screen and (max-width:721px)" rel="stylesheet" />
+  <link href="/assets/large-ltr-695b3c0a0a5b368dcca863750581b196.css" media="screen and (min-width: 722px)" rel="stylesheet" />
+  <link href="/assets/print-ltr-194426268630808108c65bc3c08d7c4e.css" media="print" rel="stylesheet" />
+  <link href="/assets/leaflet-all-7d00c9c3d3215fa390986c6cad853006.css" media="screen, print" rel="stylesheet" />
+  <!--[if IE]>
+    <link href="/assets/large-ltr-695b3c0a0a5b368dcca863750581b196.css" media="screen" rel="stylesheet" />
+  <![endif]-->
+  <link href="/assets/favicon-e2f4ea37ef09227603125baf4d510a55.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="/assets/osm_logo_57-c7b4d93cb544eaa106884efee3f6753e.png" rel="apple-touch-icon" sizes="57x57" type="image/png" />
+  <link href="/assets/osm_logo_72-610d4875600d6dcaef865a983e65d02a.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+  <link href="/assets/osm_logo_114-3529c3d407efbc3f71af881a6c12fa41.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+  <link href="/assets/osm_logo_144-a4b7bb77a1b82da00bd7bde34a423a7c.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+  <link href="/assets/osm_logo_228-fa76a62829350bbf966fce89b2bb5a1a.png" rel="icon" sizes="228x228" type="image/png" />
+  <meta content="/assets/osm_logo_144-a4b7bb77a1b82da00bd7bde34a423a7c.png" name="msapplication-TileImage" />
+  <link href="https://plus.google.com/111953119785824514010" rel="publisher" />
+  <link href="/assets/osm-5effc28f884ffb2101b3dbb8f1b03176.xml" rel="search" title="OpenStreetMap Search" type="application/opensearchdescription+xml" />
+  <meta content="OpenStreetMap is the free wiki world map." name="description" />
+  <meta content="/assets/osm_logo-9bf05bb62c92bfb5d8770c064c823ab3.png" property="og:image" />
+  <style type="text/css">.hidden { display: none !important }.hide_unless_logged_in { display: none !important }.hide_unless_administrator { display: none !important }.hide_unless_moderator { display: none !important }</style>
+    <script src="/assets/index-7b1ed512a2c42607a5a30eaf24f54cbb.js"></script>
+
+  
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="o+dhFfnXer83UyJead1jL2mqSk02Ml4xEUa1tGmFfeo=" name="csrf-token" />
+  <script type="text/javascript">
+    I18n.defaultLocale = "en";
+    I18n.locale = "en";
+    I18n.fallbacks = true;
+    OSM.preferred_editor = "id";
+  </script>
+  <title>OpenStreetMap</title>
+</head>
+
+  <body class="map-layout">
+    <header class="closed">
+  <h1>
+    <a href="/" class="geolink">
+      <img alt="OpenStreetMap logo" class="logo" src="/assets/osm_logo-9bf05bb62c92bfb5d8770c064c823ab3.png" />
+      OpenStreetMap
+    </a>
+  </h1>
+  <a href="#" id="menu-icon"></a>
+  <nav class='primary'>
+      <form accept-charset="UTF-8" action="/search" class="search_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="o+dhFfnXer83UyJead1jL2mqSk02Ml4xEUa1tGmFfeo=" /></div>
+  <input name="commit" type="submit" value="Go" />
+  <div class='query_wrapper'>
+    <input id="query" name="query" placeholder="Search" type="text" />
+    <a class="describe_location" href="#" title="Describe the current location using the search engine">Where am I?</a>
+  </div>
+</form>
+
+    <ul>
+      <li id="edit_tab" class="dropdown ">
+        <a class="tab geolink editlink" data-editor="id" href="/edit" id="editanchor">Edit</a><a class='dropdown-toggle' data-toggle='dropdown' href='#'><b class="caret"></b></a>
+        <ul class='dropdown-menu'>
+            <li>
+              <a class="geolink editlink" data-editor="id" href="/edit?editor=id">Edit with iD (in-browser editor)</a>
+            </li>
+            <li>
+              <a class="geolink editlink" data-editor="potlatch2" href="/edit?editor=potlatch2">Edit with Potlatch 2 (in-browser editor)</a>
+            </li>
+            <li>
+              <a class="geolink editlink" data-editor="remote" href="/edit?editor=remote">Edit with Remote Control (JOSM or Merkaartor)</a>
+            </li>
+        </ul>
+      </li>
+      <li id="history_tab" class="">
+        <a class="tab geolink" href="/history">History</a>
+      </li>
+      <li id="export_tab" class="">
+        <a class="tab geolink" href="/export">Export</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class='secondary'>
+    <ul>
+      <li class="compact-hide "><a href="/traces">GPS Traces</a></li>
+      <li class="compact-hide "><a href="/diary">User Diaries</a></li>
+      <li class="compact-hide "><a href="/copyright">Copyright</a></li>
+      <li class="compact-hide "><a href="/help">Help</a></li>
+      <li class="compact-hide "><a href="/about">About</a></li>
+      <li id="compact-secondary-nav" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class=""><a href="/traces">GPS Traces</a></li>
+          <li class=""><a href="/diary">User Diaries</a></li>
+          <li class=""><a href="/help">Help</a></li>
+          <li class=""><a href="/about">About</a></li>
+          <li class=""><a href="/copyright">Copyright</a></li>
+        </ul>
+      </li>
+    </ul>
+      <ul class="user-menu clearfix">
+        <li><a href="/login?referer=%2F%3F%2Fapi%2Fcapabilities">Log In</a></li>
+        <li><a href="/user/new">Sign Up</a></li>
+      </ul>
+  </nav>
+</header>
+
+    <div id="content" class="overlay-sidebar">
+      <div id="sidebar">
+    <form accept-charset="UTF-8" action="/search" class="search_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="o+dhFfnXer83UyJead1jL2mqSk02Ml4xEUa1tGmFfeo=" /></div>
+  <input name="commit" type="submit" value="Go" />
+  <div class='query_wrapper'>
+    <input autofocus="autofocus" id="query" name="query" placeholder="Search" type="text" />
+    <a class="describe_location" href="#" title="Describe the current location using the search engine">Where am I?</a>
+  </div>
+</form>
+
+
+    <div id="flash">
+      
+
+
+    </div>
+
+    <div id="browse_status"></div>
+
+    <div id="sidebar_loader" style="display: none;">
+      <img alt="Loading..." class="loader" src="/assets/searching-05c318e57537dd6a81b0e22d1f1b22e8.gif">
+    </div>
+
+    <div id="sidebar_content">
+      
+    </div>
+
+      <div class="welcome">
+        <h2><a><span class="icon close"></span></a>Welcome to OpenStreetMap!</h2>
+        <p>OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+        <a class="button learn-more" href="/about">Learn More</a>
+        <a class="button sign-up" href="/user/new">Start Mapping</a>
+      </div>
+  </div>
+
+  <noscript>
+    <div id="noscript">
+      <p>You are either using a browser that does not support JavaScript, or you have disabled JavaScript.</p>
+      <p>OpenStreetMap uses JavaScript for its slippy map.</p>
+    </div>
+  </noscript>
+
+  <div id="map-ui">
+  </div>
+
+  <div id="map" tabindex="2">
+  </div>
+
+  <div id="attribution">
+    <table width="100%">
+      <tr>
+        <td class="attribution_license">http://openstreetmap.org/copyright</td>
+        <td class="attribution_project">http://openstreetmap.org</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="attribution_notice">Copyright OpenStreetMap and contributors, under an open license</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+  </body>
+</html>
+
+
